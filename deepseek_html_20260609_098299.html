@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vacante de Jefe de Bodega en Grupo Empresarial INDELED. Buscamos un líder comprometido, organizado y con capacidad de liderazgo para fortalecer nuestro equipo logístico. ¡Postúlate ahora!">
+    <meta name="keywords" content="Jefe de Bodega, vacante logística, empleo bodega, trabajo almacén, reclutamiento logístico, INDELED">
+    <meta name="author" content="Grupo Empresarial INDELED">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="¡Estamos Contratando! Jefe de Bodega | INDELED">
+    <meta property="og:description" content="Buscamos un Jefe de Bodega comprometido, organizado y con capacidad de liderazgo. Postúlate por WhatsApp.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://drive.google.com/uc?export=view&id=1d_4Sa6XkGOouhtRiWAxmeglTokliu0wv">
+    <meta property="og:locale" content="es_ES">
+    <title>Jefe de Bodega | Vacante Logística | Grupo Empresarial INDELED</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0f1f3a;
+            --primary-light: #1a3354;
+            --primary-mid: #1e3f66;
+            --accent: #e8a817;
+            --accent-hover: #c98d0f;
+            --accent-light: #fdf3d0;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            --white: #ffffff;
+            --whatsapp: #25D366;
+            --whatsapp-hover: #1ebe5b;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.08);
+            --shadow-xl: 0 25px 50px rgba(0, 0, 0, 0.15);
+            --radius-sm: 8px;
+            --radius: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 20px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--gray-50);
+            color: var(--gray-800);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* ============ UTILIDADES ============ */
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        @media (min-width: 768px) {
+            .container { padding: 0 32px; }
+        }
+        @media (min-width: 1024px) {
+            .container { padding: 0 40px; }
+        }
+
+        /* ============ ANIMACIONES SCROLL ============ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; }
+
+        /* ============ BOTÓN FLOTANTE WHATSAPP ============ */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--whatsapp);
+            color: white;
+            text-decoration: none;
+            padding: 14px 22px;
+            border-radius: 50px;
+            box-shadow: var(--shadow-xl);
+            transition: all var(--transition);
+            cursor: pointer;
+            animation: floatPulse 2.5s ease-in-out infinite;
+            white-space: nowrap;
+        }
+        .floating-whatsapp:hover {
+            background: var(--whatsapp-hover);
+            transform: translateY(-3px) scale(1.04);
+            box-shadow: 0 30px 55px rgba(37, 211, 102, 0.4);
+            animation: none;
+        }
+        .floating-whatsapp:active { transform: scale(0.96); transition: transform 0.1s; }
+        .floating-whatsapp .whatsapp-icon { font-size: 26px; line-height: 1; flex-shrink: 0; }
+        .floating-whatsapp .whatsapp-text { font-weight: 600; font-size: 0.9rem; letter-spacing: 0.01em; }
+        @media (max-width: 480px) {
+            .floating-whatsapp { bottom: 16px; right: 16px; padding: 13px 18px; gap: 8px; }
+            .floating-whatsapp .whatsapp-text { font-size: 0.8rem; }
+            .floating-whatsapp .whatsapp-icon { font-size: 22px; }
+        }
+        @keyframes floatPulse {
+            0%, 100% { box-shadow: 0 20px 40px rgba(37, 211, 102, 0.25); transform: translateY(0); }
+            50% { box-shadow: 0 28px 50px rgba(37, 211, 102, 0.45); transform: translateY(-6px); }
+        }
+
+        /* ============ HERO CON IMAGEN DE FONDO ============ */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary) url('https://drive.google.com/uc?export=view&id=1d_4Sa6XkGOouhtRiWAxmeglTokliu0wv') center/cover no-repeat;
+            overflow: hidden;
+            padding: 80px 0 60px;
+        }
+        /* Overlay oscuro para legibilidad */
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg, rgba(15, 31, 58, 0.92) 0%, rgba(15, 31, 58, 0.7) 50%, rgba(15, 31, 58, 0.88) 100%);
+            z-index: 1;
+        }
+        .hero-accent-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), #f5c842, var(--accent));
+            z-index: 3;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 750px;
+            padding: 0 20px;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(232, 168, 23, 0.18);
+            border: 1px solid rgba(232, 168, 23, 0.4);
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            padding: 8px 18px;
+            border-radius: 50px;
+            margin-bottom: 24px;
+            animation: fadeInDown 0.8s ease-out;
+            backdrop-filter: blur(4px);
+        }
+        .hero-badge .badge-dot {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: var(--accent);
+            animation: blinkDot 1.5s ease-in-out infinite;
+        }
+        @keyframes blinkDot {
+            0%, 100% { opacity: 1; box-shadow: 0 0 6px var(--accent); }
+            50% { opacity: 0.4; box-shadow: 0 0 2px var(--accent); }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+            animation: fadeInUp 0.8s ease-out 0.15s both;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .hero h1 .highlight {
+            color: var(--accent);
+            position: relative;
+            display: inline-block;
+        }
+        .hero h1 .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 4px; left: 0; right: 0;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+            opacity: 0.6;
+        }
+        .hero-subtitle {
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 36px;
+            line-height: 1.7;
+            animation: fadeInUp 0.8s ease-out 0.3s both;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .btn-whatsapp-hero {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--whatsapp);
+            color: white;
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.4);
+            transition: all var(--transition);
+            animation: fadeInUp 0.8s ease-out 0.45s both;
+            letter-spacing: 0.01em;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-whatsapp-hero:hover {
+            background: var(--whatsapp-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(37, 211, 102, 0.55);
+        }
+        .btn-whatsapp-hero:active { transform: scale(0.95); transition: transform 0.1s; }
+        .btn-whatsapp-hero i { font-size: 1.4rem; }
+        @media (max-width: 768px) {
+            .hero { min-height: auto; padding: 100px 0 70px; }
+        }
+
+        /* ============ SECCIONES GENERALES ============ */
+        .section { padding: 60px 0; }
+        @media (min-width: 768px) { .section { padding: 80px 0; } }
+        @media (min-width: 1024px) { .section { padding: 100px 0; } }
+        .section-title {
+            text-align: center; margin-bottom: 16px;
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 800; color: var(--primary);
+            letter-spacing: -0.02em;
+        }
+        .section-subtitle { text-align: center; color: var(--gray-500); font-size: 1rem; margin-bottom: 48px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+        .section-divider { width: 60px; height: 4px; background: var(--accent); border-radius: 2px; margin: 0 auto 40px; }
+
+        /* ============ INFO GENERAL ============ */
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 800px; margin: 0 auto; }
+        @media (min-width: 600px) { .info-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; } }
+        .info-card { background: var(--white); border-radius: var(--radius); padding: 24px 20px; text-align: center; box-shadow: var(--shadow); border: 1px solid var(--gray-200); transition: all var(--transition); position: relative; overflow: hidden; }
+        .info-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary-mid), var(--accent)); opacity: 0; transition: opacity var(--transition); }
+        .info-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--gray-300); }
+        .info-card:hover::before { opacity: 1; }
+        .info-card-icon { font-size: 2rem; color: var(--primary-mid); margin-bottom: 10px; display: block; }
+        .info-card-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gray-500); font-weight: 600; margin-bottom: 4px; }
+        .info-card-value { font-weight: 700; font-size: 0.95rem; color: var(--gray-800); line-height: 1.4; }
+        @media (max-width: 380px) { .info-card { padding: 16px 12px; } .info-card-value { font-size: 0.8rem; } .info-card-icon { font-size: 1.5rem; } }
+
+        /* ============ PERFIL ============ */
+        .profile-section { background: var(--white); border-radius: var(--radius-lg); padding: 40px 28px; box-shadow: var(--shadow-md); border: 1px solid var(--gray-200); max-width: 800px; margin: 0 auto; }
+        @media (min-width: 768px) { .profile-section { padding: 48px 40px; } }
+        .profile-grid { display: grid; grid-template-columns: 1fr; gap: 28px; }
+        @media (min-width: 640px) { .profile-grid { grid-template-columns: 1fr 1fr; gap: 36px; } }
+        .profile-block h3 { font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .profile-block h3 i { color: var(--accent); font-size: 1.3rem; }
+        .profile-block p, .profile-block ul { color: var(--gray-600); font-size: 0.95rem; line-height: 1.7; }
+        .profile-block ul { list-style: none; padding: 0; }
+        .profile-block ul li { padding-left: 20px; position: relative; margin-bottom: 6px; }
+        .profile-block ul li::before { content: ''; position: absolute; left: 0; top: 9px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+
+        /* ============ HABILIDADES ============ */
+        .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; max-width: 900px; margin: 0 auto; }
+        @media (min-width: 500px) { .skills-grid { grid-template-columns: repeat(3, 1fr); gap: 18px; } }
+        @media (min-width: 768px) { .skills-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; } }
+        .skill-card { background: var(--white); border-radius: var(--radius); padding: 22px 16px; text-align: center; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200); transition: all var(--transition); cursor: default; }
+        .skill-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--accent); }
+        .skill-card-icon { font-size: 2.2rem; margin-bottom: 10px; display: block; transition: transform var(--transition); }
+        .skill-card:hover .skill-card-icon { transform: scale(1.15); }
+        .skill-card-text { font-weight: 600; font-size: 0.88rem; color: var(--gray-700); line-height: 1.4; }
+
+        /* ============ ACORDEÓN ============ */
+        .accordion-container { max-width: 800px; margin: 0 auto; }
+        .accordion-item { background: var(--white); border-radius: var(--radius); margin-bottom: 10px; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200); overflow: hidden; transition: all var(--transition); }
+        .accordion-item:hover { box-shadow: var(--shadow); }
+        .accordion-header { width: 100%; background: none; border: none; padding: 18px 20px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; font-weight: 600; font-size: 0.95rem; color: var(--gray-800); text-align: left; font-family: 'Inter', sans-serif; gap: 12px; transition: all var(--transition); }
+        .accordion-header:hover { color: var(--primary-mid); background: var(--gray-50); }
+        .accordion-header i:first-child { color: var(--accent); font-size: 1.3rem; flex-shrink: 0; }
+        .accordion-header .accordion-arrow { font-size: 1.2rem; color: var(--gray-400); transition: transform var(--transition-slow); flex-shrink: 0; }
+        .accordion-item.active .accordion-header .accordion-arrow { transform: rotate(180deg); color: var(--accent); }
+        .accordion-body { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.5s cubic-bezier(0.4, 0, 0.2, 1); padding: 0 20px; }
+        .accordion-item.active .accordion-body { max-height: 600px; padding: 0 20px 20px; }
+        .accordion-body ul { list-style: none; padding: 0; margin: 0; }
+        .accordion-body ul li { padding: 8px 0 8px 22px; position: relative; color: var(--gray-600); font-size: 0.9rem; line-height: 1.6; border-bottom: 1px solid var(--gray-100); }
+        .accordion-body ul li:last-child { border-bottom: none; }
+        .accordion-body ul li::before { content: '✓'; position: absolute; left: 0; top: 8px; color: var(--accent); font-weight: 700; font-size: 0.8rem; }
+
+        /* ============ BENEFICIOS ============ */
+        .benefits-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 800px; margin: 0 auto; }
+        @media (min-width: 600px) { .benefits-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; } }
+        .benefit-card { background: var(--white); border-radius: var(--radius); padding: 28px 18px; text-align: center; box-shadow: var(--shadow); border: 1px solid var(--gray-200); transition: all var(--transition); position: relative; overflow: hidden; }
+        .benefit-card::after { content: ''; position: absolute; bottom: 0; left: 20%; right: 20%; height: 3px; border-radius: 3px; background: var(--accent); opacity: 0; transition: all var(--transition); }
+        .benefit-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .benefit-card:hover::after { opacity: 1; left: 15%; right: 15%; }
+        .benefit-icon { font-size: 2.5rem; margin-bottom: 12px; display: block; }
+        .benefit-title { font-weight: 700; font-size: 0.9rem; color: var(--gray-800); line-height: 1.4; }
+
+        /* ============ CTA FINAL ============ */
+        .cta-section { background: linear-gradient(160deg, #0f1f3a 0%, #132847 100%); text-align: center; padding: 60px 20px; position: relative; overflow: hidden; }
+        .cta-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(232, 168, 23, 0.08) 0%, transparent 70%); pointer-events: none; }
+        .cta-content { position: relative; z-index: 2; max-width: 600px; margin: 0 auto; }
+        .cta-content h2 { color: var(--white); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; margin-bottom: 12px; }
+        .cta-content p { color: rgba(255, 255, 255, 0.75); font-size: 1rem; margin-bottom: 32px; }
+        .btn-cta-large { display: inline-flex; align-items: center; gap: 12px; background: var(--whatsapp); color: white; font-weight: 700; font-size: 1.15rem; padding: 18px 36px; border-radius: 50px; text-decoration: none; box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4); transition: all var(--transition); cursor: pointer; border: none; }
+        .btn-cta-large:hover { background: var(--whatsapp-hover); transform: translateY(-4px); box-shadow: 0 25px 45px rgba(37, 211, 102, 0.55); }
+        .btn-cta-large:active { transform: scale(0.94); }
+
+        /* ============ FOOTER ============ */
+        .footer { background: var(--gray-900); color: var(--gray-400); padding: 40px 20px; text-align: center; font-size: 0.9rem; line-height: 1.8; }
+        .footer .footer-info { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; margin-bottom: 16px; color: var(--gray-300); }
+        .footer .footer-info span { display: flex; align-items: center; gap: 6px; }
+        .footer .footer-info i { color: var(--accent); }
+        .footer .footer-copy { color: var(--gray-500); font-size: 0.8rem; }
+
+        /* ============ SCROLL TO TOP ============ */
+        .scroll-top { position: fixed; bottom: 100px; right: 24px; z-index: 999; width: 44px; height: 44px; border-radius: 50%; background: var(--white); border: 2px solid var(--gray-300); color: var(--gray-600); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: var(--shadow-md); transition: all var(--transition); opacity: 0; pointer-events: none; font-size: 1.2rem; }
+        .scroll-top.visible-scroll { opacity: 1; pointer-events: auto; }
+        .scroll-top:hover { background: var(--primary-mid); color: white; border-color: var(--primary-mid); transform: translateY(-3px); }
+        @media (max-width: 480px) { .scroll-top { bottom: 90px; right: 16px; width: 38px; height: 38px; } }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== BOTÓN FLOTANTE WHATSAPP ==================== -->
+    <a href="https://wa.me/573137556679?text=Hola,%20estoy%20interesado%20en%20la%20vacante%20de%20Jefe%20de%20Bodega."
+       class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" title="Postúlate por WhatsApp">
+        <span class="whatsapp-icon"><i class="ri-whatsapp-line"></i></span>
+        <span class="whatsapp-text">Postularme</span>
+    </a>
+
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Volver arriba" title="Volver arriba">
+        <i class="ri-arrow-up-s-line"></i>
+    </button>
+
+    <!-- ==================== HERO CON IMAGEN DE FONDO ==================== -->
+    <header class="hero" id="inicio">
+        <div class="hero-accent-line"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span> Vacante Disponible
+            </div>
+            <h1>¡Estamos <span class="highlight">Contratando</span>!</h1>
+            <p class="hero-subtitle">
+                Buscamos un <strong>Jefe de Bodega</strong> comprometido, organizado y con capacidad de liderazgo
+                para fortalecer nuestro equipo logístico.
+            </p>
+            <a href="https://wa.me/573137556679?text=Hola,%20estoy%20interesado%20en%20la%20vacante%20de%20Jefe%20de%20Bodega."
+               class="btn-whatsapp-hero" target="_blank" rel="noopener noreferrer">
+                <i class="ri-whatsapp-line"></i> Postularme por WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- ==================== SECCIÓN: INFORMACIÓN GENERAL ==================== -->
+    <section class="section" id="info-general" style="background: var(--gray-50);">
+        <div class="container">
+            <h2 class="section-title reveal">Información General</h2>
+            <div class="section-divider reveal reveal-delay-1"></div>
+            <div class="info-grid">
+                <div class="info-card reveal reveal-delay-1">
+                    <span class="info-card-icon"><i class="ri-briefcase-4-line"></i></span>
+                    <span class="info-card-label">Cargo</span>
+                    <span class="info-card-value">Jefe de Bodega</span>
+                </div>
+                <div class="info-card reveal reveal-delay-2">
+                    <span class="info-card-icon"><i class="ri-time-line"></i></span>
+                    <span class="info-card-label">Horario</span>
+                    <span class="info-card-value">L-V: 8am-5pm<br>Sáb: 8am-12pm</span>
+                </div>
+                <div class="info-card reveal reveal-delay-3">
+                    <span class="info-card-icon"><i class="ri-money-dollar-circle-line"></i></span>
+                    <span class="info-card-label">Salario</span>
+                    <span class="info-card-value">A convenir</span>
+                </div>
+                <div class="info-card reveal reveal-delay-4">
+                    <span class="info-card-icon"><i class="ri-map-pin-line"></i></span>
+                    <span class="info-card-label">Modalidad</span>
+                    <span class="info-card-value">Presencial</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN: PERFIL DEL CANDIDATO ==================== -->
+    <section class="section" id="perfil" style="background: var(--white);">
+        <div class="container">
+            <h2 class="section-title reveal">¿Qué buscamos?</h2>
+            <div class="section-divider reveal reveal-delay-1"></div>
+            <div class="profile-section reveal reveal-delay-2">
+                <div class="profile-grid">
+                    <div class="profile-block">
+                        <h3><i class="ri-graduation-cap-fill"></i> Educación</h3>
+                        <p>Técnico o Tecnólogo en Logística, Administración o carreras afines.</p>
+                    </div>
+                    <div class="profile-block">
+                        <h3><i class="ri-star-fill"></i> Experiencia</h3>
+                        <p>Mínimo <strong>1 año</strong> en:</p>
+                        <ul>
+                            <li>Manejo de bodega</li>
+                            <li>Inventarios</li>
+                            <li>Proveedores</li>
+                            <li>Transportadores</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN: HABILIDADES ==================== -->
+    <section class="section" id="habilidades" style="background: var(--gray-50);">
+        <div class="container">
+            <h2 class="section-title reveal">Habilidades Requeridas</h2>
+            <div class="section-divider reveal reveal-delay-1"></div>
+            <div class="skills-grid">
+                <div class="skill-card reveal reveal-delay-1"><span class="skill-card-icon">🧑‍💼</span><span class="skill-card-text">Liderazgo de equipos operativos</span></div>
+                <div class="skill-card reveal reveal-delay-2"><span class="skill-card-icon">💬</span><span class="skill-card-text">Comunicación asertiva</span></div>
+                <div class="skill-card reveal reveal-delay-3"><span class="skill-card-icon">🧠</span><span class="skill-card-text">Pensamiento estratégico</span></div>
+                <div class="skill-card reveal reveal-delay-1"><span class="skill-card-icon">🔍</span><span class="skill-card-text">Orientación al detalle</span></div>
+                <div class="skill-card reveal reveal-delay-2"><span class="skill-card-icon">✅</span><span class="skill-card-text">Toma de decisiones</span></div>
+                <div class="skill-card reveal reveal-delay-3"><span class="skill-card-icon">⚡</span><span class="skill-card-text">Trabajo bajo presión</span></div>
+                <div class="skill-card reveal reveal-delay-4" style="grid-column: 1 / -1; max-width: 280px; justify-self: center;">
+                    <span class="skill-card-icon">🛡️</span><span class="skill-card-text">Honestidad y ética profesional</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN: RESPONSABILIDADES ==================== -->
+    <section class="section" id="responsabilidades" style="background: var(--white);">
+        <div class="container">
+            <h2 class="section-title reveal">Responsabilidades Principales</h2>
+            <div class="section-divider reveal reveal-delay-1"></div>
+            <div class="accordion-container reveal reveal-delay-2">
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false"><i class="ri-truck-line"></i> Recepción y Almacenamiento <i class="ri-arrow-down-s-line accordion-arrow"></i></button>
+                    <div class="accordion-body"><ul><li>Coordinar la recepción de mercancía garantizando que los productos ingresen en condiciones óptimas.</li><li>Definir y controlar condiciones de almacenamiento y ubicación de mercancía.</li><li>Aplicar protocolos de manipulación de carga y prevención de riesgos.</li></ul></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false"><i class="ri-bar-chart-box-line"></i> Gestión de Inventarios <i class="ri-arrow-down-s-line accordion-arrow"></i></button>
+                    <div class="accordion-body"><ul><li>Apoyar la gestión de inventarios y seguimiento de existencias físicas y de software.</li><li>Monitorear inventarios cíclicos y generales.</li><li>Generar y analizar reportes de rotación y obsolescencia.</li></ul></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false"><i class="ri-send-plane-line"></i> Despacho y Distribución <i class="ri-arrow-down-s-line accordion-arrow"></i></button>
+                    <div class="accordion-body"><ul><li>Supervisar la preparación, despacho y distribución de pedidos.</li><li>Gestionar retornos, reclamaciones o productos defectuosos.</li><li>Coordinar rutas, tiempos de entrega y condiciones de envío.</li><li>Realizar liquidación de pedidos considerando criterios logísticos y tarifarios.</li></ul></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false"><i class="ri-tools-line"></i> Mantenimiento y Seguridad <i class="ri-arrow-down-s-line accordion-arrow"></i></button>
+                    <div class="accordion-body"><ul><li>Supervisar mantenimiento preventivo y correctivo de equipos de bodega.</li><li>Supervisar normas de seguridad y orden dentro de la bodega.</li></ul></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false"><i class="ri-team-line"></i> Coordinación y Administración <i class="ri-arrow-down-s-line accordion-arrow"></i></button>
+                    <div class="accordion-body"><ul><li>Garantizar integración eficiente entre clientes, asesores, proveedores y transportadores.</li></ul></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN: BENEFICIOS ==================== -->
+    <section class="section" id="beneficios" style="background: var(--gray-50);">
+        <div class="container">
+            <h2 class="section-title reveal">Beneficios</h2>
+            <div class="section-divider reveal reveal-delay-1"></div>
+            <div class="benefits-grid">
+                <div class="benefit-card reveal reveal-delay-1"><span class="benefit-icon">🏢</span><span class="benefit-title">Estabilidad laboral</span></div>
+                <div class="benefit-card reveal reveal-delay-2"><span class="benefit-icon">🤝</span><span class="benefit-title">Ambiente de trabajo profesional</span></div>
+                <div class="benefit-card reveal reveal-delay-3"><span class="benefit-icon">📈</span><span class="benefit-title">Oportunidad de crecimiento</span></div>
+                <div class="benefit-card reveal reveal-delay-4"><span class="benefit-icon">🎯</span><span class="benefit-title">Participación en procesos estratégicos</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN: CTA FINAL ==================== -->
+    <section class="cta-section" id="cta-final">
+        <div class="cta-content reveal">
+            <h2>¿Crees que eres el candidato ideal?</h2>
+            <p>Queremos conocerte. Escríbenos ahora y envíanos tu hoja de vida.</p>
+            <a href="https://wa.me/573137556679?text=Hola,%20estoy%20interesado%20en%20la%20vacante%20de%20Jefe%20de%20Bodega."
+               class="btn-cta-large" target="_blank" rel="noopener noreferrer">
+                <i class="ri-whatsapp-line"></i> Enviar Mensaje por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- ==================== PIE DE PÁGINA ==================== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-info">
+                <span><i class="ri-building-line"></i> Grupo Empresarial INDELED</span>
+                <span><i class="ri-mail-line"></i> talentohumano@indeled.co</span>
+                <span><i class="ri-whatsapp-line"></i> +57 3137556679</span>
+                <span><i class="ri-map-pin-2-line"></i> cl. 68 #25-25, Bogotá D.C.</span>
+            </div>
+            <p class="footer-copy">© 2026 Grupo Empresarial INDELED. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            // ============ INTERSECTION OBSERVER PARA ANIMACIONES SCROLL ============
+            const revealElements = document.querySelectorAll('.reveal');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -40px 0px',
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            revealElements.forEach(el => observer.observe(el));
+
+            // ============ ACORDEÓN ============
+            const accordionItems = document.querySelectorAll('.accordion-item');
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                header.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    accordionItems.forEach(i => i.classList.remove('active'));
+                    if (!isActive) {
+                        item.classList.add('active');
+                        header.setAttribute('aria-expanded', 'true');
+                    } else {
+                        header.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+
+            // ============ SCROLL TO TOP ============
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    scrollTopBtn.classList.add('visible-scroll');
+                } else {
+                    scrollTopBtn.classList.remove('visible-scroll');
+                }
+            });
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // ============ WHATSAPP CONFIGURATION (Grupo INDELED) ============
+            const WHATSAPP_NUMBER = '573137556679';
+            const WHATSAPP_MESSAGE = 'Hola, estoy interesado en la vacante de Jefe de Bodega.';
+            const encodedMessage = encodeURIComponent(WHATSAPP_MESSAGE);
+            const whatsappBaseURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+            document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+                link.setAttribute('href', whatsappBaseURL);
+            });
+
+            console.log('%c🚀 Landing Page INDELED - Jefe de Bodega %c| Lista para publicar',
+                'font-weight:bold; font-size:14px; color:#1e3f66;', 'color:#6b7280;');
+            console.log('%c📱 WhatsApp: %c+57 3137556679', 'color:#25D366;', 'color:#333;');
+            console.log('%c🏢 Grupo Empresarial INDELED', 'color:#e8a817;');
+        })();
+    </script>
+</body>
+</html>
